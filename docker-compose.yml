@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: telegram_bot
+    environment:
+      - API_TOKEN=7065747281:AAHFsGOtVRGA-xlhLFsChdbTHlw4ND4uIwE
+      - GEMINI_API_KEY=AIzaSyBfnTWkR_iDTWguXcTa8k9nuf5WiWeY7aM
+      - DB_USERNAME=kitaphub_owner
+      - DB_PASSWORD=oxFAO2lU8CJg
+      - DATABASE_URL=postgresql://kitaphub_owner:oxFAO2lU8CJg@ep-soft-limit-a2t2akkp.eu-central-1.aws.neon.tech/kitaphub?sslmode=require
+    ports:
+      - "8181:8181"
